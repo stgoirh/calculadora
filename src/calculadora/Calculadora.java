@@ -15,7 +15,6 @@ public class Calculadora {
             int opcion = JOptionPane.showOptionDialog(
                     null, "que operacion desea realizar?", "Operaciones", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, null
             );
-            JOptionPane.showMessageDialog(null, "Ha elejido: " + opciones[opcion]);
             int oper = opcion;
             switch (oper) {
                 case 0:
@@ -44,20 +43,20 @@ public class Calculadora {
                     break;
                 case 3:
                     String Num1di = JOptionPane.showInputDialog("Ingrese un numero");
-                    int Num1div = Integer.parseInt(Num1di);
+                    double Num1div = Double.parseDouble(Num1di);
                     String Num2di = JOptionPane.showInputDialog("Ingrese un numero");
-                    int Num2div = Integer.parseInt(Num2di);
+                    double Num2div = Double.parseDouble(Num2di);
                     if(Num2div==0){
                         JOptionPane.showMessageDialog(null, "el numero 2 no puede ser"
                                 + " 0 ingrese otro numero");
                         String NumAuxS = JOptionPane.showInputDialog("Ingrese otro numero");
-                        int NumAux = Integer.parseInt(NumAuxS);
+                        double NumAux = Double.parseDouble(NumAuxS);
                         JOptionPane.showMessageDialog(null, "el numero ingresado es: " + NumAuxS);
-                        int Rdiv = Num1div / NumAux;
+                        double Rdiv = Num1div / NumAux;
                         JOptionPane.showMessageDialog(null, "el resultado es: " + Rdiv);
                         break;
                     }else{
-                        int Rdiv = Num1div / Num2div;
+                        double Rdiv = Num1div / Num2div;
                         JOptionPane.showMessageDialog(null, "el resultado es: " + Rdiv);
                         break; 
                     } 
@@ -70,7 +69,7 @@ public class Calculadora {
                         JOptionPane.showMessageDialog(null,Num1may+"es mayor que: "+ Num2may);
                         break;
                     }else{
-                        JOptionPane.showMessageDialog(null,Num2may+"es mayor que"+Num1may);
+                        JOptionPane.showMessageDialog(null,Num2may+" es mayor que "+Num1may);
                         break;
                     }
                 case 5:    
