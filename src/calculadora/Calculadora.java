@@ -35,13 +35,28 @@ public class Calculadora {
                             ,    opciones
                             ,    null  
         );
-        JOptionPane.showMessageDialog(null,"Ha elejido: "+opciones[opcion]);
-        int Rsum=Num1+Num2;
-        int Rrest=Num1-Num2;
-        int Rmult=Num1*Num2;
-        int Rdiv=Num1/Num2;       
-        if(opcion==1){
-            JOptionPane.showMessageDialog(null,"el resultado es: "+Rsum);
+        JOptionPane.showMessageDialog(null,"Ha elejido: "+opciones[opcion]);   
+        int oper=opcion;
+        switch(oper){
+            case 0:
+                int Rsum=Num1+Num2;
+                JOptionPane.showMessageDialog(null,"el resultado es: "+Rsum);
+                break;
+            case 1:
+                int Rrest=Num1-Num2;
+                JOptionPane.showMessageDialog(null,"el resultado es: "+Rrest);
+                break;
+            case 2:
+                int Rmult=Num1*Num2;
+                JOptionPane.showMessageDialog(null,"el resultado es: "+Rmult);
+                break;
+            case 3:
+                int Rdiv=Num1/Num2;
+                JOptionPane.showMessageDialog(null,"el resultado es: "+Rdiv);
+                break;
+            default:
+                JOptionPane.showMessageDialog(null,"error");
+                break;
         }
     }
     
